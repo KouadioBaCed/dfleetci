@@ -1,0 +1,42 @@
+.footer {
+  padding: 56px 28px 40px;
+  text-align: center;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+/* Filet copper subtil au-dessus */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--copper-500);
+  border-radius: 2px;
+}
+
+.footer-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+.footer-logo:hover {
+  opacity: 1;
+}
+
+.footer p {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}

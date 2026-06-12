@@ -1,0 +1,160 @@
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   D-FLEET CI · Design System
+   Sage (primary) + Copper (accent)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ━━ Sage (primary) ━━ */
+  --sage-50:  #E8EFED;
+  --sage-100: #D5E3E0;
+  --sage-200: #B7CFC9;
+  --sage-300: #99BBB2;
+  --sage-400: #82A59D;
+  --sage-500: #6A8A82;
+  --sage-600: #547169;
+  --sage-700: #3F554F;
+  --sage-800: #2A3935;
+  --sage-900: #151D1B;
+
+  /* Aliases */
+  --primary: var(--sage-500);
+  --primary-light: var(--sage-50);
+  --primary-dark: var(--sage-700);
+
+  /* ━━ Copper (accent) ━━ */
+  --copper-50:  #F5E8DD;
+  --copper-100: #EDDCC8;
+  --copper-200: #E0C4A0;
+  --copper-300: #D3AC78;
+  --copper-400: #C59050;
+  --copper-500: #B87333;
+  --copper-600: #935C29;
+  --copper-700: #6E451F;
+  --copper-800: #492E14;
+  --copper-900: #24170A;
+
+  /* Aliases */
+  --secondary: var(--copper-500);
+  --secondary-light: var(--copper-50);
+  --secondary-dark: var(--copper-700);
+
+  /* ━━ Neutrals ━━ */
+  --white: #FFFFFF;
+  --bg: #F0F3F2;
+  --bg-soft: #F8FAFA;
+  --surface: #FFFFFF;
+  --border: #E5E7EB;
+  --border-soft: #EEF2F1;
+
+  --text: #191919;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+
+  /* ━━ Status ━━ */
+  --success: #16A34A;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --info: #2563EB;
+
+  /* ━━ Shadows (premium subtil) ━━ */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.10);
+  --shadow-xl: 0 24px 60px rgba(15, 23, 42, 0.14);
+  --shadow-sage: 0 12px 32px rgba(106, 138, 130, 0.18);
+  --shadow-copper: 0 12px 32px rgba(184, 115, 51, 0.22);
+
+  /* ━━ Radius ━━ */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-2xl: 24px;
+  --r-3xl: 32px;
+  --r-full: 999px;
+
+  /* ━━ Layout ━━ */
+  --container: 1200px;
+  --nav-h: 72px;
+
+  /* ━━ Aliases retro-compat (anciens noms encore utilises dans Demo.css) ━━ */
+  --primary-50: var(--sage-50);
+  --primary-100: var(--sage-100);
+  --primary-500: var(--sage-500);
+  --primary-600: var(--sage-600);
+  --primary-700: var(--sage-700);
+  --secondary-500: var(--copper-500);
+  --secondary-dark: var(--copper-700);
+  --gray: var(--border);
+  --off-white: var(--bg);
+  --black: #191919;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ━━ Selection ━━ */
+::selection {
+  background: var(--sage-100);
+  color: var(--sage-800);
+}
+
+/* ━━ Scrollbar ━━ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sage-200);
+  border-radius: var(--r-full);
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage-400);
+}
