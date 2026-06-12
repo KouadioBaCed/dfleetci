@@ -3,8 +3,8 @@ import { Menu, X } from 'lucide-react'
 import './Navbar.css'
 
 const NAV_LINKS = [
-  { label: 'Fonctionnalités', href: '#features' },
-  { label: 'Démo', href: '#demo' },
+  { label: 'Solutions', href: '#features' },
+  { label: 'Fonctionnalités', href: '#demo' },
   { label: 'Contact', href: '#cta' },
 ]
 

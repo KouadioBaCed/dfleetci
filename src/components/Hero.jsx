@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { CheckCircle, DollarSign } from 'lucide-react'
+import { WHATSAPP_DEMO_URL } from '../whatsapp'
 import './Hero.css'
 
 const STATS = [
@@ -10,7 +11,7 @@ const STATS = [
 
 const BAR_HEIGHTS = [40, 65, 55, 80, 45, 70, 90, 60, 75, 50, 85, 65]
 
-export default function Hero({ onOpenDemo }) {
+export default function Hero() {
   const chartRef = useRef(null)
 
   useEffect(() => {
@@ -42,9 +43,9 @@ export default function Hero({ onOpenDemo }) {
             des conducteurs, du carburant, de la maintenance et des missions.
           </p>
           <div className="hero-actions">
-            <button className="btn-primary" onClick={onOpenDemo}>
-              Voir la démo
-            </button>
+            <a className="btn-primary" href={WHATSAPP_DEMO_URL} target="_blank" rel="noopener noreferrer">
+              Demander une démo
+            </a>
             <a className="btn-secondary" href="https://wa.me/2250716253873" target="_blank" rel="noopener noreferrer">
               Nous contacter
             </a>
